@@ -10,7 +10,7 @@ const onAuth = auth();
 onAuth.then(() => {
     const userInfo = jwt.getUserInfo();
     analytics(userInfo);
-    window.getName(userInfo);
+    window.addEventListener('DOMContentLoaded', window.getName(userInfo));
 });
 
 // used for translating event names exposed publicly to internal event names
