@@ -8,8 +8,9 @@ jobs:
     include:
     - stage: build:beta
       script: npm run verify:beta
-    - stage: deploy
-      script: ls -lh
+deploy:
+  provider: script
+  script: ls -lh
 env:
     global:
     - REPO="git@github.com:RedHatInsights/insights-chrome-build"
