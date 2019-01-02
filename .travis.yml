@@ -13,6 +13,7 @@ jobs:
       if: branch IN (master, prod-beta, qa-beta, ci-beta)
       script: npm run verify:beta
     - stage: deploy
+      script: ls -lh
       script: curl -sSL https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/bootstrap.sh | bash -s
 env:
     global:
