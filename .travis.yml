@@ -11,6 +11,8 @@ jobs:
 deploy:
   provider: script
   script: ls -lh
+  on:
+    branch: travistest
 env:
     global:
     - REPO="git@github.com:RedHatInsights/insights-chrome-build"
