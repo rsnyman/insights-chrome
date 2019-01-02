@@ -14,7 +14,6 @@ jobs:
       script: npm run verify:beta
     - stage: deploy
       script: ls -lh
-      script: curl -sSL https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/bootstrap.sh | bash -s
 env:
     global:
     - REPO="git@github.com:RedHatInsights/insights-chrome-build"
