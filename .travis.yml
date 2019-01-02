@@ -6,11 +6,7 @@ install:
 - npm ci
 jobs:
     include:
-    - stage: build:stable
-      if: branch IN (prod-stable, qa-stable, ci-stable)
-      script: npm run verify
     - stage: build:beta
-      if: branch IN (master, prod-beta, qa-beta, ci-beta)
       script: npm run verify:beta
     - stage: deploy
       script: ls -lh
