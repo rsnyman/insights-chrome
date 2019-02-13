@@ -32,6 +32,11 @@ aside {
     display: none;
 }
 
+// If the filter is enabled, the background breaks in Firefox.
+.pf-c-background-image {
+    --pf-c-background-image--Filter:                none;
+}
+
 // Page temp styles
 .pf-c-page {
   --pf-c-page__header-brand--FlexBasis--lg:         290px;
